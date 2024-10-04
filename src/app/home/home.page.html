@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
+<ion-item>
+  <ion-input [(ngModel)]="TareaIngresada" placeholder="Añadir tarea" (keydown)="onKeydown($event)"></ion-input>
+  <ion-button (click)="agregarTarea()">Agregar</ion-button>
+</ion-item>
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Lista de Tareas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let tarea of ListaTotal">
+      <div class="tarea-texto">
+        {{ tarea.nombre }}
+      </div>
+      <div class="button-container">
+        <ion-button (click)="borrarTarea(tarea)">Borrar</ion-button>
+        <ion-button (click)="marcarComoCompletada(tarea)">
+          {{ tarea.completada ? 'Sin completar' : 'Completada!' }}
+        </ion-button>
+      </div>
+    </ion-item>
+    
+  </ion-list>
 </ion-content>
+

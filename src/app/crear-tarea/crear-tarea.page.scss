@@ -1,0 +1,64 @@
+/* Estilos para el ion-item y la entrada de tareas */
+ion-item {
+    --background: #f8f8f8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  ion-input {
+    --padding-start: 12px;
+    --padding-end: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Botón para agregar tarea */
+  ion-button {
+    --background: #4CAF50; /* Verde */
+    --color: white;
+    --border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  ion-button:hover {
+    --background: #45a049; /* Verde oscuro */
+  }
+  
+  /* Lista de tareas */
+  ion-list {
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  ion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+  
+  /* Estilos para el botón de borrar y completar */
+  ion-item ion-button {
+    --background: #ff5722; /* Rojo */
+    margin-left: 8px;
+  }
+  
+  ion-item ion-button:last-child {
+    --background: #2196F3; /* Azul */
+  }
+  
+  ion-item ion-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estilo de párrafo */
+  p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  

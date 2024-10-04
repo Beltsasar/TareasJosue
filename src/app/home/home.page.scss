@@ -1,27 +1,90 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Estilos para el ion-item y la entrada de tareas */
+ion-item {
+  --background: #f8f8f8;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
+ion-input {
+  --padding-start: 12px;
+  --padding-end: 12px;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#container a {
-  text-decoration: none;
+/* Botón para agregar tarea */
+ion-button {
+  --background: #4CAF50; /* Verde */
+  --color: white;
+  --border-radius: 5px;
+  font-size: 14px;
+}
+
+ion-button:hover {
+  --background: #45a049; /* Verde oscuro */
+}
+
+/* Lista de tareas */
+ion-list {
+  padding: 10px;
+  background-color: #fff;
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Estilos para el botón de borrar y completar */
+ion-item ion-button {
+  --background: #ff5722; /* Rojo */
+  margin-left: 8px;
+}
+
+ion-item ion-button:last-child {
+  --background: #2196F3; /* Azul */
+}
+
+ion-item ion-button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo de párrafo */
+p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+ion-item {
+  display: flex;            /* Flexbox para alinear el contenido */
+  justify-content: space-between; /* Espacio entre el texto y los botones */
+  align-items: center;      /* Alinea verticalmente los botones y el texto */
+}
+
+.tarea-texto {
+  flex-grow: 1;             /* El texto ocupa todo el espacio restante */
+  padding-right: 10px;      /* Espacio entre el texto y los botones */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;                /* Espacio entre los botones */
+}
+
+ion-button {
+  --padding-start: 10px;    /* Añadir un poco de espacio interno a los botones */
+  --padding-end: 10px;
+}
+#add-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+#add-button.active {
+  transform: scale(1.1);  /* Agranda el botón temporalmente */
 }
